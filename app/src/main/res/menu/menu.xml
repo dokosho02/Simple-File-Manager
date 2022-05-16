@@ -79,4 +79,9 @@
         android:icon="@drawable/ic_info_vector"
         android:title="@string/about"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/exit"
+        android:icon="@drawable/ic_info_vector"
+        android:title="@string/exit"
+        app:showAsAction="ifRoom" />
 </menu>

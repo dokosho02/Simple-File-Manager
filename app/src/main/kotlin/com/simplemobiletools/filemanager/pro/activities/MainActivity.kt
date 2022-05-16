@@ -201,9 +201,18 @@ class MainActivity : SimpleActivity() {
             R.id.reduce_column_count -> reduceColumnCount()
             R.id.settings -> launchSettings()
             R.id.about -> launchAbout()
+            R.id.exit -> launchExit()
+
             else -> return super.onOptionsItemSelected(item)
         }
         return true
+    }
+
+    private fun launchExit() {
+        val startMain = Intent(Intent.ACTION_MAIN)
+        startMain.addCategory(Intent.CATEGORY_HOME)
+        startMain.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(startMain)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
